@@ -1,7 +1,7 @@
 {
     "template" : {
-        "builder" : "default",
-        "file" : "/config/tmep.json"
+        "builder" : "/wtscript/tempconv.js",
+        "file" : "/config/temp.json"
     },
     "pagestruct" : [
         {

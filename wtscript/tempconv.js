@@ -13,7 +13,7 @@ export function tempconv(tempname){
                     j = JSON.parse(e)
                 }
                 catch{
-                    rej("File \"" + tempname + "\" is not valid Setting File")
+                    rej("ファイル \"" + tempname + "\" は設定ファイル形式が間違っています。")
                 }
                 let ro = {name:[],base:[]};
                 try{
@@ -23,14 +23,14 @@ export function tempconv(tempname){
                     });
                 }
                 catch{
-                    rej("File \"" + tempname + "\" is not valid Setting File")
+                    rej("ファイル \"" + tempname + "\" は設定ファイル形式が間違っています。")
                 }
                 res(ro);
             }).catch(e=>{
                 if(e === 4545){
                     return;
                 }
-                rej("Fetch error occured")
+                rej("ファイルを取得できませんでした。")
             })
     })
 }

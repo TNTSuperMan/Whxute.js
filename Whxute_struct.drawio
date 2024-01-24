@@ -1,105 +1,38 @@
-<mxfile host="app.diagrams.net" modified="2024-01-17T13:23:45.553Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="Jr0PvPJh2Bp4dTIWHiLq" version="22.1.18" type="device">
+<mxfile host="app.diagrams.net" modified="2024-01-24T12:03:53.527Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="oPR2RKmnQhZ_OROrfeff" version="22.1.20" type="device">
   <diagram name="ページ1" id="qsX5YfaFcHBDhfQnIDAT">
-    <mxGraphModel dx="1016" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="864" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6KJtTVsWGzSg4_Wu3TIm-1" target="6KJtTVsWGzSg4_Wu3TIm-10">
+        <mxCell id="VZd6y7I324uqGI26aukI-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VZd6y7I324uqGI26aukI-2" target="VZd6y7I324uqGI26aukI-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="6KJtTVsWGzSg4_Wu3TIm-1" target="6KJtTVsWGzSg4_Wu3TIm-4">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="270" y="40" />
-              <mxPoint x="270" y="530" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="VZd6y7I324uqGI26aukI-2" value="即時関数" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-1" value="即時関数&lt;br&gt;勃発" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="10" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6KJtTVsWGzSg4_Wu3TIm-5" target="6KJtTVsWGzSg4_Wu3TIm-4">
+        <mxCell id="VZd6y7I324uqGI26aukI-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VZd6y7I324uqGI26aukI-3" target="VZd6y7I324uqGI26aukI-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-5" value="ページ内リンク移動" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry y="400" width="120" height="60" as="geometry" />
+        <mxCell id="VZd6y7I324uqGI26aukI-3" value="wtsetting.jsonの&lt;br&gt;読込" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6KJtTVsWGzSg4_Wu3TIm-10" target="6KJtTVsWGzSg4_Wu3TIm-8">
+        <mxCell id="VZd6y7I324uqGI26aukI-6" value="テンプレ取得" style="swimlane;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="300" y="30" width="430" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="VZd6y7I324uqGI26aukI-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="VZd6y7I324uqGI26aukI-6" source="VZd6y7I324uqGI26aukI-7" target="VZd6y7I324uqGI26aukI-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6KJtTVsWGzSg4_Wu3TIm-10" target="6KJtTVsWGzSg4_Wu3TIm-30">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="VZd6y7I324uqGI26aukI-7" value="ビルダインポート" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="VZd6y7I324uqGI26aukI-6">
+          <mxGeometry x="40" y="100" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-10" value="wtsetting.json&lt;br&gt;を読み込み" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="190" width="120" height="60" as="geometry" />
+        <mxCell id="VZd6y7I324uqGI26aukI-9" value="thenで&lt;br&gt;ビルダにパス渡す" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="VZd6y7I324uqGI26aukI-6">
+          <mxGeometry x="210" y="100" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-15" value="Promiseタスク　テンプレ読込" style="swimlane;whiteSpace=wrap;html=1;align=left;spacingTop=0;spacingBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="370" y="90" width="660" height="290" as="geometry" />
+        <mxCell id="VZd6y7I324uqGI26aukI-11" value="ヘッダフッタその他" style="swimlane;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="310" y="260" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="6KJtTVsWGzSg4_Wu3TIm-15" source="6KJtTVsWGzSg4_Wu3TIm-8" target="6KJtTVsWGzSg4_Wu3TIm-36">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-8" value="テンプレートビルダーを&lt;br&gt;import()で読み込み" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-15">
-          <mxGeometry x="50" y="200" width="180" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-26" value="テンプレートビルダーで&lt;br&gt;テンプレートをビルド" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-15">
-          <mxGeometry x="460" y="200" width="180" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="6KJtTVsWGzSg4_Wu3TIm-15" source="6KJtTVsWGzSg4_Wu3TIm-30" target="6KJtTVsWGzSg4_Wu3TIm-36">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-30" value="Promiseタスク&lt;br&gt;テンプレートファイルを取得" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-15">
-          <mxGeometry x="40" y="90" width="210" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="6KJtTVsWGzSg4_Wu3TIm-15" source="6KJtTVsWGzSg4_Wu3TIm-36" target="6KJtTVsWGzSg4_Wu3TIm-26">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-36" value="テンプレファイルの取得を待機" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-15">
-          <mxGeometry x="280" y="200" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-17" value="Promiseタスク　ページ読込" style="swimlane;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="520" y="460" width="1040" height="350" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="6KJtTVsWGzSg4_Wu3TIm-17" source="6KJtTVsWGzSg4_Wu3TIm-4" target="6KJtTVsWGzSg4_Wu3TIm-41">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-4" value="ページファイルを取得" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-17">
-          <mxGeometry x="35" y="50" width="130" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="6KJtTVsWGzSg4_Wu3TIm-17" source="6KJtTVsWGzSg4_Wu3TIm-41" target="6KJtTVsWGzSg4_Wu3TIm-44">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-41" value="もしテンプレート&lt;br&gt;が構築済みじゃ&lt;br&gt;ないなら" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;size=30;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-17">
-          <mxGeometry x="190" y="80" width="170" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="6KJtTVsWGzSg4_Wu3TIm-17" source="6KJtTVsWGzSg4_Wu3TIm-44">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="620" y="90" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-44" value="テンプレ読込を待機" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-17">
-          <mxGeometry x="390" y="50" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="6KJtTVsWGzSg4_Wu3TIm-10" target="6KJtTVsWGzSg4_Wu3TIm-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-21" value="Promiseタスク　wtsetting.json" style="swimlane;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="20" y="120" width="200" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-34" value="Promiseタスク　非同期的に処理するタスク" style="swimlane;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry y="640" width="320" height="190" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-33" value="命令" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-34">
-          <mxGeometry x="30" y="40" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-35" value="Promiseの待機" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-34">
-          <mxGeometry x="180" y="50" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-53" value="IF文" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="6KJtTVsWGzSg4_Wu3TIm-34">
-          <mxGeometry x="40" y="110" width="100" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="6KJtTVsWGzSg4_Wu3TIm-55" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="520" width="120" height="60" as="geometry" />
+        <mxCell id="VZd6y7I324uqGI26aukI-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="VZd6y7I324uqGI26aukI-11">
+          <mxGeometry x="40" y="70" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

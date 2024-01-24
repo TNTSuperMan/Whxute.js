@@ -1,10 +1,9 @@
 (async()=>{
-    
+    const wtsetting = "wtsetting.json";
     //#region wtsetting.jsonの読み込み
-    let wtsf = await fetch("wtsetting.json");
+    const wtsf = await fetch(wtsetting);
     if(!wtsf.ok){
-        alert("Whxuto.js エラー: wtsetting.jsonにアクセスできません\n" + 
-              "HTTPステータス:" + wtsf.status + " " + wtsf.statusText)
+        alert("Whxuto.js エラー: \"" + wtsetting + "\"にアクセスできません\n")
               return;
     }
     let wts = {};
@@ -12,7 +11,7 @@
         wts = JSON.parse(await wtsf.text());
     }
     catch{
-        alert("Whxuto.js エラー: wtsetting.jsonの記述が不正です。")
+        alert("Whxuto.js エラー: \"" + wtsetting + "\"の記述が不正です。")
               return;
     }
     let wep = [];
@@ -28,7 +27,7 @@
     }
     
     if(wep.length != 0){
-        let res = "wtsetting.jsonで以下の設定が欠如しています。\n";
+        let res = "Whxuto.js エラー: \"" + wtsetting + "\"で以下の設定が欠如しています。\n";
         wep.forEach(e=>{
             res += e + "\n";
         });
@@ -37,4 +36,17 @@
     }
     //#endregion
 
+    
+    //#region テンプレ読込
+    let temp = import(wts.template.builder).then(e=>{
+                        e.tempconv(wts.template.file).then(b=>{
+                            template=b;
+                        }).catch(z=>{alert("テンプレートビルダーエラー: " + z);});
+                    });
+    
+    //#endregion
 })();
+let template = {base:[],name:[]};
+function l(){
+    
+}
