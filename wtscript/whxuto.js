@@ -1,7 +1,7 @@
 (async()=>{
-    const wtsetting = "wtsetting.json";
     //#region wtsetting.jsonの読み込み
-    const wtsf = await fetch(wtsetting);
+    const wtsetting = "wtsetting.json";
+    const wtsf = await fetch(wtsetting,{cache:"no-store"});
     if(!wtsf.ok){
         alert("Whxuto.js エラー: \"" + wtsetting + "\"にアクセスできません\n")
               return;
@@ -36,15 +36,38 @@
     }
     //#endregion
 
-    
     //#region テンプレ読込
-    let temp = import(wts.template.builder).then(e=>{
-                        e.tempconv(wts.template.file).then(b=>{
-                            template=b;
-                        }).catch(z=>{alert("テンプレートビルダーエラー: " + z);});
-                    });
-    
+    const temp = import(wts.template.builder).then(e=>{
+            e.tempconv(wts.template.file).then(b=>{
+                template=b;
+            }).catch(z=>{alert("テンプレートビルダーエラー: " + z);return 4545})});
     //#endregion
+
+    //#region ページファイル読み込み
+    const errpage = ":p:404 Not Found\n" + 
+    ":p:ページファイルが存在しません。";
+    let pf = [];
+    let pfi = [];
+    wts.pagestruct.forEach(e=>{
+        let pass = e.default;
+        if(e.id == "main"){
+            let z = Object.fromEntries(new URLSearchParams(location.search));
+            if(z.p != undefined){
+                let f = wts.pagepath;
+                pass = f.first + z.p + f.last;
+            }
+        }
+        pf.push(fetch(pass).then(e=>{
+            if(!e.ok) return errpage;
+            return e.text();
+        }).catch(e=>errpage));
+        pfi.push(e.id);
+    });
+    //#endregion
+
+    if(await temp === 4545) return; //テンプレ読込失敗してたら自滅
+
+    
 })();
 let template = {base:[],name:[]};
 function l(){

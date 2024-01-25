@@ -1,6 +1,6 @@
 export function tempconv(tempname){
     return new Promise((res,rej)=>{
-        fetch(tempname)
+        fetch(tempname,{cache:"no-store"})
             .then(e=>{
                 if(!e.ok){
                     rej(e.status + " " + e.statusText);
