@@ -1,7 +1,8 @@
 {
-    "template" : {
-        "builder" : "/wtscript/tempconv.js",
-        "file" : "/config/temp.json"
+    "tempfile" : "/config/temp.json",
+    "pagepath" : {
+        "first" : "/page/",
+        "last" : ".page"
     },
     "pagestruct" : [
         {
@@ -12,20 +13,18 @@
         {
             "id" : "main",
             "ename" : "main",
-            "default" : "/page/1.page"
-        },{
-            "id" : "sidebar",
-            "ename" : "div",
-            "default" : "/page/1.page"
+            "default" : "/page/1.page",
+            "attr" : [
+                {
+                    "name" : "class",
+                    "value" : "0721"
+                }
+            ]
         },
         {
             "id" : "footer",
             "ename" : "footer",
             "default" : "/pstat/footer.page"
         }
-    ],
-    "pagepath" : {
-        "first" : "/page/",
-        "last" : ".page"
-    }
+    ]
 }

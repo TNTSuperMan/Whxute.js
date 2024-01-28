@@ -1,6 +1,10 @@
 [
     {
-        "name" : "Text",
-        "base" : ":p:%1"
+        "name" : "img",
+        "base" : ":img:\n=src=%2\n=style=width:%1px"
+    },
+    {
+        "name" : "test",
+        "base" : "/1:%1, 2:%2"
     }
 ]
