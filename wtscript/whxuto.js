@@ -52,10 +52,10 @@
     let pfi = [];
     wts.pagestruct.forEach(e=>{
         let pass = e.default;
-        if(e.id == "main"){
+        if(e.id === "main"){
             let z = Object.fromEntries(new URLSearchParams(location.search));
             if(z.p != undefined){
-                let f = wts.pagepath;
+                f = wts.pagepath;
                 pass = f.first + z.p + f.last;
             }
         }
@@ -63,6 +63,7 @@
         if(e.attr)e.attr.forEach(v=>pe.setAttribute(v.name,v.value));
         document.body.appendChild(pe);
         pfe.push(pe);
+        if(e.id === "main") me = pe;
         pf.push(fetch(pass).then(e=>{
             if(!e.ok) return errpage;
             return e.text();
@@ -79,16 +80,26 @@
     }
 
     //#region ページ構築
-    Promise.all(pf).then(de=>pfe.forEach((ee,i)=>Whxute(de[i],ee)));
+    Promise.all(pf).then(de=>pfe.forEach((ee,i)=>Whxute(de[i],ee)))
+    .then(e=>{
+        let z = Object.fromEntries(new URLSearchParams(location.search));
+        if(z.s != undefined){
+            document.documentElement.scrollTop += document.getElementById(z.s).getBoundingClientRect().y;
+    }})
     //#endregion
 })();
+let f;
 let template = {base:[],name:[]};
 let me;
 function l(id){
+    fetch(f.first + z.p + f.last)
+        .then(e=>e.text())
+        .then(e=>Whxute(e,me));
     
 }
 function Whxute(c,e){
     let o = [e];
+    e.innerHTML = "";
     let se = null;
     let pmode = false;
     const no = e=>o[o.length-1];
@@ -115,9 +126,9 @@ function Whxute(c,e){
                 no().appendChild(ne);
                 break;
             case '=': //Element attribute
-                if(!se) break;
                 let ar = p.split('=');
                 if(ar.length < 3) break;
+                if(!se){no().setAttribute(ar[1],ar[2]); break;}
                 se.setAttribute(ar[1],ar[2]);
                 break;
             case '\\'://Template
