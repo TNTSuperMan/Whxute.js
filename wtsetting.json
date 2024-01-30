@@ -13,13 +13,7 @@
         {
             "id" : "main",
             "ename" : "main",
-            "default" : "/page/1.page",
-            "attr" : [
-                {
-                    "name" : "class",
-                    "value" : "0721"
-                }
-            ]
+            "default" : "/page/home.page"
         },
         {
             "id" : "footer",

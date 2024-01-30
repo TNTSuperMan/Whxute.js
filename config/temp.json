@@ -1,14 +1,6 @@
 [
     {
-        "name" : "img",
-        "base" : ":img:\n=src=%2\n=style=width:%1px"
-    },
-    {
-        "name" : "test",
-        "base" : "/1:%1, 2:%2"
-    },
-    {
-        "name" : "sl",
-        "base" : ":div:\n=id=%1"
+        "name" : "tb",
+        "base" : ":a:%1\n=href=#\n=onclick=l('%2')\n=class=tb\n&&nbsp;"
     }
 ]

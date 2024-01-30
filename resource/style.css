@@ -1,0 +1,11 @@
+.tb{
+    text-decoration: none;
+    color:black;
+    border:1px black solid;
+    padding:3px;
+    transition:all 0.3s ease;
+}
+.tb:hover{
+    background:#C5C5C5;
+    border:1px #C5C5C5 solid;
+}

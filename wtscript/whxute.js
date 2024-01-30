@@ -30,6 +30,7 @@
         });
         err(res);
     }
+    f = wts.pagepath;
     //#endregion
 
     //#region テンプレ読込
@@ -39,14 +40,12 @@
             if(e===1919) throw 1919;
             const rto = JSON.parse(e);
             let ret = {base:[],name:[]};
-            rto.forEach(e=>ret.base.push(e.base)?ret.name.push(e.name):0);
+            rto.forEach(e=>{ret.base.push(e.base);ret.name.push(e.name)});
             return ret;
             }).catch(e=>e===1919?1919:4545);
     //#endregion
 
     //#region ページファイル読み込み
-    const errpage = ":p:404 Not Found\n" + 
-    ":p:ページファイルが存在しません。";
     let pf = [];
     let pfe = [];
     let pfi = [];
@@ -55,7 +54,6 @@
         if(e.id === "main"){
             let z = Object.fromEntries(new URLSearchParams(location.search));
             if(z.p != undefined){
-                f = wts.pagepath;
                 pass = f.first + z.p + f.last;
             }
         }
@@ -80,6 +78,7 @@
     }
 
     //#region ページ構築
+    document.head.appendChild(document.createElement("title")); //タイトル要素
     Promise.all(pf).then(de=>pfe.forEach((ee,i)=>Whxute(de[i],ee)))
     .then(e=>{
         let z = Object.fromEntries(new URLSearchParams(location.search));
@@ -88,68 +87,94 @@
     }})
     //#endregion
 })();
-let f;
-let template = {base:[],name:[]};
-let me;
-function l(id){
-    fetch(f.first + z.p + f.last)
-        .then(e=>e.text())
-        .then(e=>Whxute(e,me));
+let f; //wtsetting.json設定のpagepathを保存
+let template = {base:[],name:[]}; //テンプレ保存
+let me; //メイン要素を保存
+const errpage = "404\n:p:404 Not Found\n" + 
+    ":p:ページファイルが存在しません。";
+function l(id){ //ページ内移動
+    history.replaceState('','',"?p=" + id);
+    fetch(f.first + id + f.last)
+        .then(e=>e.ok?e.text():errpage)
+        .then(e=>Whxute(e,me,1))
     
 }
-function Whxute(c,e){
+function Whxute(c,e,ef){ //ファイルを変換 ＊今回のメイン＊
     let o = [e];
-    e.innerHTML = "";
+    if(ef) e.innerHTML = "";
     let se = null;
     let pmode = false;
     const no = e=>o[o.length-1];
+    let nf = false;
+    let m;
     c.split("\r").join('').split("\n").forEach((p,i)=>{
+        
+        if(e == me && i == 0) document.querySelector("title").innerText = p;
+        if(nf) no().innerHTML += p + "\n";
+
+        if(p[0]!=='/' || p[1]==='/'){
+            if(pmode) o.pop();
+            pmode = false;
+        }
+        if(p[0]!==':' && p[0]!=='='){
+            se = null;
+        }
         switch(p[0]){
-            case '/': //P Plain Text
-                se=null;
+            case '/':
+                if(p[1]==='/') break;
                 if(!pmode){
-                    let pe = document.createElement("p");
-                    no().appendChild(pe);
-                    o.push(pe);
+                    m = document.createElement("p");
+                    no().appendChild(m);
+                    o.push(m);
                     pmode = true;
                 } else no().innerHTML += "<br>";
-                let t = p.split(""); t[0]=null;
-                no().innerHTML += t.join("");
+                m = p.split(""); m[0]=null;
+                no().innerHTML += m.join("");
                 break;
-            case ':': //Element
-                if(pmode){o.pop();pmode = false}
-                let r = p.split(":");
-                if(r.length < 3) break;
-                let ne = document.createElement(r[1]);
-                ne.innerHTML = r[2];
-                se = ne;
-                no().appendChild(ne);
+            case ':':
+                m = p.split(":");
+                if(m.length < 3) break;
+                let m2 = document.createElement(m[1]);
+                m2.innerHTML = m[2];
+                se = m2;
+                no().appendChild(m2);
                 break;
-            case '=': //Element attribute
-                let ar = p.split('=');
-                if(ar.length < 3) break;
-                if(!se){no().setAttribute(ar[1],ar[2]); break;}
-                se.setAttribute(ar[1],ar[2]);
+            case '=':
+                m = p.split('=');
+                if(m.length < 3) break;
+                if(!se){
+                    no().setAttribute(m[1],m[2]);
+                }else{
+                    se.setAttribute(m[1],m[2]);
+                }
                 break;
-            case '\\'://Template
-                se=null;
-                if(pmode){o.pop();pmode = false}
-                let tr = p.split("\\");
-                if(tr.length < 2) break;
-                let ti = template.name.indexOf(tr[1]);
+            case '\\':
+                m = p.split("\\");
+                if(m.length < 2) break;
+                let ti = template.name.indexOf(m[1]);
                 if(ti<0)break;
                 let tt = template.base[ti];
-                tr.forEach((k,i)=>{
+                m.forEach((k,i)=>{
                     if(i < 2) return;
                     tt=tt.replace("%"+(i-1),k);
                 })
                 Whxute(tt,no());
                 break;
-            case '&': //Native output
-                se=null;
-                if(pmode){o.pop();pmode = false}
-                let nt = p.split(""); nt[0]=null;
-                no().innerHTML += nt.join("");
+            case '&':
+                m = p.split(""); m[0]=null;
+                no().innerHTML += m.join("");
+                break;
+            case '-':
+                m = p.split("-");
+                if(m.length < 2) break;
+                let g = document.createElement(m[1]);
+                no().appendChild(g);
+                o.push(g);
+                if(m.length > 2) if(m[2] === "DIRECT") nf = true;
+                break;
+            case '+':
+                nf = false;
+                o.pop();
                 break;
         }
     });
