@@ -1,5 +1,12 @@
 {
-    "tempfile" : "/config/temp.json",
+    "temp" : [
+        {
+            "name" : "tb",
+            "base" : ":a:%1\n=href=#\n=onclick=l('%2')\n=class=tb\n&&nbsp;"
+        }
+    ],
+    "plugin" : [],
+    "icon" : "",
     "pagepath" : {
         "first" : "/page/",
         "last" : ".page"
