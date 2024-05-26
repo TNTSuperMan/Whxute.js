@@ -2,6 +2,8 @@
     let root = document.querySelector("html").getRootNode(); //クレジット表記コメントを付ける
     root.prepend(document.createComment("https://github.com/TNTSuperMan/Whxute.js"));
     root.prepend(document.createComment("Powered by Whxute.js by TNTSuperMan."));
+    console.log("%c Powered by Whxute.js by TNTSuperMan.", "font-size:20px");
+    console.log("https://github.com/TNTSuperMan/Whxute.js");
 
     //#region wtsetting.jsonの読み込み
     const err=e=>{alert("Whxute.js エラー：" + e);throw e};
